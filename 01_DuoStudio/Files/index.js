@@ -33,6 +33,40 @@ function init() {
 
 init();
 
-gsap.to(".page1 h1", {
-  x: -80,
+const timeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".page1 h1",
+    scroller: ".main",
+    // markers: true,
+    start: "top 27%",
+    end: "top 0%",
+    scrub: 3,
+  },
 });
+
+timeline.to(
+  ".page1 h1",
+  {
+    x: -150,
+    scale: 1.3,
+  },
+  "headings"
+);
+
+timeline.to(
+  ".page1 h2",
+  {
+    scale: 1.3,
+    x: 300,
+  },
+  "headings"
+);
+
+timeline.to(
+  ".page1 video",
+  {
+    width: "65%",
+    y: 200,
+  },
+  "headings"
+);
