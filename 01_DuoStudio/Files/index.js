@@ -48,25 +48,23 @@ timeline.to(
   ".page1 h1",
   {
     x: -150,
-    scale: 1.3,
   },
-  "headings"
+  "one"
 );
 
 timeline.to(
   ".page1 h2",
   {
-    scale: 1.3,
     x: 300,
   },
-  "headings"
+  "one"
 );
 
 timeline.to(
   ".page1 video",
   {
-    width: "65%",
-    y: 200,
+    // scale: 1.4
+    width: "80%",
   },
-  "headings"
+  "one"
 );
