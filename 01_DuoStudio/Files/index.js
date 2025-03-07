@@ -68,3 +68,18 @@ timeline.to(
   },
   "one"
 );
+
+const timeline2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".page1 h1",
+    scroller: ".main",
+    // markers: true,
+    start: "top -100%",
+    end: "top -120%",
+    scrub: 3,
+  },
+});
+
+timeline2.to(".main", {
+  backgroundColor: "#fff",
+});
