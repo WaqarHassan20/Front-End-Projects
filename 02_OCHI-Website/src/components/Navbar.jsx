@@ -39,8 +39,8 @@ function Navbar() {
             return (
               <a
                 key={index}
-                className={`text-xl font-medium capitalize ${
-                  index === 4 && "ml-96"
+                className={`text-[0.9vw] font-medium capitalize ${
+                  index === 4 && "ml-52"
                 }`}
               >
                 {item}

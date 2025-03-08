@@ -4,16 +4,16 @@ import { FaArrowUpLong } from "react-icons/fa6";
 function LandingPage() {
   return (
     <div className="w-screen h-screen bg-zinc-900 p-1">
-      <div className="textstructure mt-64 px-20">
+      <div className="textstructure mt-48 px-20">
         {["We Create", "Eye opening", "presentations"].map((item, index) => {
           return (
             <>
               <div className="masker">
                 <div className="w-fit flex items-end overflow-hidden">
                   {index === 1 && (
-                    <div className="mr-[1vw] rounded-md w-[9vw] bg-red-600 relative -top-[0.7vw] h-[5vw]"></div>
+                    <div className="rounded-md w-[7.5vw] bg-red-600 relative -top-[1vw] h-[4.5vw]"></div>
                   )}
-                  <h1 className="uppercase text-[6.5vw] flex items-center h-full leading-[6.5vw] tracking-tighter font-semibold">
+                  <h1 className="uppercase text-[6vw] flex items-center h-full leading-[6.5vw] tracking-tighter font-semibold">
                     {item}
                   </h1>
                 </div>
@@ -23,7 +23,7 @@ function LandingPage() {
         })}
       </div>
 
-      <div className="mt-28 border-t-[2px] border-zinc-700 flex justify-between items-center px-20">
+      <div className="mt-28 border-t-[1px] border-zinc-800 flex justify-between items-center px-20">
         {[
           "For public and private companies",
           "From the first pitch to IPO",
@@ -31,7 +31,7 @@ function LandingPage() {
           return (
             <p
               key={index}
-              className="leading-none font-light tracking-tight text-xl py-5"
+              className="leading-none font-light tracking-tight text-lg py-5"
             >
               {item}
             </p>
@@ -39,7 +39,7 @@ function LandingPage() {
         })}
 
         <div className="start flex items-center gap-2">
-          <div className="px-4 py-2 border-2 border-zinc-500 font-light text-md rounded-full uppercase">
+          <div className="px-4 py-1 border-2 border-zinc-500 font-light text-md rounded-full uppercase">
             Start the project{" "}
           </div>
           <div className="w-10 h-10 border-2 border-zinc-500 flex justify-center items-center rounded-full">
