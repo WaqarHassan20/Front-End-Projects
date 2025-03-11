@@ -13,9 +13,11 @@ function About() {
           <h1 className="text-[3.5vw] tracking-tight font-medium">
             Our approach:
           </h1>
-          <button className="rounded-full bg-zinc-900 mt-1 text-white px-7 py-5 uppercase flex gap-11 items-center">
-            Read More <div className="w-3 h-3 bg-white rounded-full"></div>
-          </button>
+          <ArrowButton
+            text={"Read More"}
+            bgColor={"bg-zinc-900"}
+            textColor={"text-white"}
+          />
         </div>
         <div className="w-1/2 h-[65vh] rounded-3xl">
           <img
@@ -29,3 +31,13 @@ function About() {
 }
 
 export default About;
+
+export function ArrowButton({ text, bgColor, textColor }) {
+  return (
+    <button
+      className={`rounded-full ${bgColor} mt-1 ${textColor} px-7 py-5 uppercase flex gap-11 items-center`}
+    >
+      {text} <div className="w-3 h-3 bg-white rounded-full"></div>
+    </button>
+  );
+}
