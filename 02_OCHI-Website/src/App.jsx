@@ -4,6 +4,7 @@ import Features from "./components/Features";
 import LandingPage from "./components/LandingPage";
 import Marquee from "./components/Marquee";
 import Navbar from "./components/Navbar";
+import Reviews from "./components/Reviews";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <About />
         <Eyes />
         <Features />
+        <Reviews />
       </div>
     </>
   );

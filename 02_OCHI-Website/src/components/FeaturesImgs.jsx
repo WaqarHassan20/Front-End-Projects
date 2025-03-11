@@ -57,13 +57,12 @@ function FeaturesImgs({ url1, url2, text1, text2, heading1, heading2 }) {
           <HashTags text="Social media template" />
         </div>
       </div>
-
     </div>
   );
 }
 
 export default FeaturesImgs;
-function HashTags({ text = "defaultTag" }) {
+export function HashTags({ text = "defaultTag" }) {
   return (
     <div className="w-fit px-5 mt-4 ml-2 py-1 rounded-full border-1 border-slate-200 flex gap-4 items-center bg-zinc-900">
       <p className="uppercase text-[0.9vw] mt-1 font-medium text-slate-200">

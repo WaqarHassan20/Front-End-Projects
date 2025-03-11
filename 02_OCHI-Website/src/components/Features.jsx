@@ -45,7 +45,7 @@ function Features() {
           text2={"FYDE"}
         />
         <div className="w-full flex justify-center">
-          <button className="rounded-full bg-slate-200 text-black font-medium mt-10 px-7 py-5 uppercase flex gap-11 items-center">
+          <button className="rounded-full bg-slate-200 text-black font-semibold text-[1vw] my-8 px-7 py-4 uppercase flex gap-11 items-center">
             See all studycases{" "}
             <div className="w-3 h-3 bg-black rounded-full"></div>
           </button>
