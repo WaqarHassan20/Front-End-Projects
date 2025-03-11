@@ -4,36 +4,41 @@ import { useState, useEffect } from "react";
 function Eyes() {
   const [rotate, setRotate] = useState(0);
 
-  //   useEffect(() => {
-  //     const eventHandle = (e) => {
-  //       let mouseX = e.clientX;
-  //       let mouseY = e.clientY;
+  // useEffect(() => {
+  //   window.addEventListener("mousemove", (e) => {
+  //     let mouseX = e.clientX;
+  //     let mouseY = e.clientY;
 
-  //       let deltaX = mouseX - window.innerWidth / 2;
-  //       let deltaY = mouseY - window.innerHeight / 2;
+  //     let deltaX = mouseX - window.innerWidth / 2;
+  //     let deltaY = mouseY - window.innerHeight / 2;
 
-  //       let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-  //       setRotate(angle - 180);
-  //     };
+  //     let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+  //     setRotate(angle - 180);
+  //   });
+  // }, []);
 
-  //     window.addEventListener("mousemove", eventHandle);
-
-  //     return () => {
-  //       window.removeEventListener("mousemove", eventHandle);
-  //     };
-  //   }, []);
-
+  // Another and better approach for the above event on mouse
   useEffect(() => {
-    window.addEventListener("mousemove", (e) => {
-      let mouseX = e.clientX;
-      let mouseY = e.clientY;
+    const handleMouseMoveEvent = (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
 
-      let deltaX = mouseX - window.innerWidth / 2;
-      let deltaY = mouseY - window.innerHeight / 2;
+      let deltaX = mouseX - window.innerWidth / 2; // Minus current mouse position from screen center
+      let deltaY = mouseY - window.innerHeight / 2; // Minus current mouse position from screen center
 
-      let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-      setRotate(angle - 180);
-    });
+      let angle = Math.atan2(deltaY, deltaX); // Calculate mouse angle position
+      let angleDeg = angle * (180 / Math.PI) - 180; // Convert the angle to degrees and subtract 180 degrees because eyes are looking at the opposite direction of cursor
+
+      requestAnimationFrame(() => {
+        setRotate(angleDeg);
+      });
+    };
+
+    window.addEventListener("mousemove", handleMouseMoveEvent);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMoveEvent);
+    };
   }, []);
 
   return (
