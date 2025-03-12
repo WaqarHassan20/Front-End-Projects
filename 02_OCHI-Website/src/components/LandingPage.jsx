@@ -4,7 +4,7 @@ import { FaArrowUpLong } from "react-icons/fa6";
 function LandingPage() {
   return (
     <div className="w-screen h-screen bg-zinc-900 p-1">
-      <div className="textstructure mt-48 px-20">
+      <div className="textstructure mt-[12vw] px-20">
         {["We Create", "Eye opening", "presentations"].map((item, index) => {
           return (
             <>
@@ -23,7 +23,7 @@ function LandingPage() {
         })}
       </div>
 
-      <div className="mt-28 border-t-[1px] border-zinc-800 flex justify-between items-center px-20">
+      <div className="mt-[10vw] border-t-[1px] border-zinc-800 flex justify-between items-center px-20">
         {[
           "For public and private companies",
           "From the first pitch to IPO",

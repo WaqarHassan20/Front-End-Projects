@@ -2,7 +2,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="fixed z-999 w-full px-20 py-8 flex justify-between items-center">
+    <div className="bg-transparent backdrop-blur-md z-999 w-full px-[4vw] py-[1vw] flex justify-between items-center">
       <div className="logo">
         <svg
           width="72"
@@ -39,7 +39,7 @@ function Navbar() {
             return (
               <a
                 key={index}
-                className={`text-[0.9vw] font-medium capitalize ${
+                className={`text-[0.9vw] font-semibold capitalize ${
                   index === 4 && "ml-52"
                 }`}
               >

@@ -19,7 +19,10 @@ function ReviewComponent({
   return (
     <>
       <motion.div
-        animate={{ height: isExpanded ? "7vh" : "53vh" }}
+        whileHover={{ backgroundColor: "whitesmoke"}}
+        animate={{
+          height: isExpanded ? "7vh" : "53vh",
+        }}
         className="w-full h-[53vh] border-t-[0.05vw] border-zinc-600 p-2 pt-4 flex"
       >
         <motion.div
@@ -29,12 +32,13 @@ function ReviewComponent({
           {/* <div className="w-auto h-fit p-[0.4vw] mt-[0.1vw] bg-zinc-900 rounded-full">
             <FaArrowRightLong />
           </div> */}
-          <a
+          <motion.a
+            whileHover={{ zoom: 1.1 }}
             className="text-[1.1vw] underline underline-offset-4 text-zinc-900 font-normal tracking-tight"
             href="https://www.google.com"
           >
             {linkSite}
-          </a>
+          </motion.a>
         </motion.div>
 
         <motion.div
