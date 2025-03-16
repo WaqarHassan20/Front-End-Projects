@@ -11,24 +11,76 @@ html {
   color: #fff;
 }
 
+/* // cursor effect // */
+.cursor {
+  background-color: #edbfff;
+  position: fixed;
+  z-index: 9;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  transition: background-image all 0.5s;
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: difference;
+  transition: all linear 0.2s;
+}
+
+#purple {
+  background-color: #edbfff;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  opacity: 0;
+  display: none;
+  transition: all ease-in-out 1s;
+}
+
 .main {
   background-color: #0f0d0d;
 }
 
+/* // marquee code starts from here // */
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 10vw;
+  position: absolute;
+  top: 40%;
+  font-weight: bold;
+  color: #333;
+  animation: marquee 50s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(5%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* // page1 starts from here // */
 .page1 {
   position: relative;
   z-index: 9;
   height: max-content;
   width: 100%;
+  padding-top: 12vw;
 }
 
 #nav {
-  height: 55px;
-  padding: 2vw;
+  padding: 1vw;
   width: 100%;
+  position: fixed;
+  mix-blend-mode: difference;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 102;
 }
 
 #nav img {
@@ -40,6 +92,7 @@ html {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  padding: 1.5vw 0.5vw;
 }
 
 .nav-part3 .circle {
@@ -64,7 +117,6 @@ html {
   font-size: 9vw;
   font-weight: 300;
   font-family: pp mori;
-  margin-top: 12vw;
   letter-spacing: -2px;
   margin-left: 13vw;
 }
@@ -96,7 +148,6 @@ html {
 }
 
 /* Page2 Starts from here */
-
 .page2 {
   position: relative;
   z-index: 9;
@@ -159,7 +210,6 @@ html {
 }
 
 /* // page3 starts form here // */
-
 .page3 {
   /* background-color: #; */
   width: 100%;
@@ -259,17 +309,7 @@ html {
   letter-spacing: -0.05vw;
 }
 
-.cursor {
-  background-color: #edbfff;
-  position: fixed;
-  z-index: 9;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  transition: all linear 0.2s;
-}
-
+/* // page4 starts from here // */
 .page4 {
   border-top: 0.1vw solid #fff;
   /* background-color: #edbfff; */
@@ -370,6 +410,7 @@ html {
   height: 13vw;
 }
 
+/* // page5 starts from here// */
 .page5 {
   width: 100%;
   min-height: 100vh;
@@ -417,7 +458,7 @@ html {
   border-bottom: 0.1vw solid #fff;
 }
 
-.page5 .box h3 {
+.page5 .box h4 {
   font-size: 1.5vw;
   font-weight: 400;
   font-family: monospace;
@@ -440,8 +481,9 @@ html {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* // Footer starts from here // */
 footer {
   width: 100%;
   min-height: 100vh;
-  background-color: #6c6c6c;
+  background-color: #edbfff;
 }

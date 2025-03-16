@@ -33,6 +33,9 @@ function init() {
 
 init();
 
+// ------------------------------------------ //
+// Gsap using the timelines and scrolltrigger //
+
 gsap.from(".page1 h1,h2", {
   opacity: 0,
   y: 100,
@@ -93,13 +96,6 @@ timeline2.to(".main", {
   backgroundColor: "#fff",
 });
 
-var cursor = document.querySelector(".cursor");
-var main = document.querySelector(".main");
-main.addEventListener("mousemove", (dets) => {
-  cursor.style.left = dets.clientX + "px";
-  cursor.style.top = dets.clientY + "px";
-});
-
 const timeline3 = gsap.timeline({
   scrollTrigger: {
     trigger: ".page1 h1",
@@ -115,6 +111,106 @@ timeline3.to(".main", {
   backgroundColor: "#0f0d0d",
 });
 
+// ------------------------------- //
+// Curosr moving circle hovering effect //
+
+var cursor = document.querySelector(".cursor");
+var main = document.querySelector(".main");
+document.addEventListener("mousemove", (dets) => {
+  cursor.style.left = dets.clientX + 7 + "px";
+  cursor.style.top = dets.clientY + 7 + "px";
+});
+
+// ------------------------------- //
+// Clients reviews hovering effect //
 
 var boxes = document.querySelectorAll(".box");
-boxes.forEach((box)=>{})
+boxes.forEach((box) => {
+  box.addEventListener("mouseenter", () => {
+    var imageAddress = box.getAttribute("data-image");
+    cursor.style.width = "25vw";
+    cursor.style.height = "30vh";
+    cursor.style.borderRadius = "0";
+    cursor.style.backgroundImage = `url(${imageAddress})`;
+    for (let i = 0; i < 3; i++) {
+      box.getElementsByTagName("h4")[i].style.color = "white";
+      box.getElementsByTagName("h4")[i].style.fontWeight = "600";
+    }
+  });
+  box.addEventListener("mouseleave", () => {
+    cursor.style.width = "1vw";
+    cursor.style.height = "1vw";
+    cursor.style.borderRadius = "100%";
+    cursor.style.backgroundImage = ``;
+    for (let i = 0; i < 3; i++) {
+      box.getElementsByTagName("h4")[i].style.color = "rgb(77, 75, 75)";
+      box.getElementsByTagName("h4")[i].style.fontWeight = "400";
+    }
+  });
+});
+
+// Navbar hovering effect //
+
+var navbar = document.querySelector(".nav-part2");
+var h4 = document.querySelectorAll("#nav h4");
+var purple = document.querySelector("#purple");
+h4.forEach((ele) => {
+  ele.addEventListener("mouseenter", () => {
+    purple.style.display = "block";
+    purple.style.opacity = "1";
+    cursor.style.width = "3vw";
+    cursor.style.height = "3vw";
+    cursor.style.zIndex = "500";
+    cursor.style.backgroundColor = "green";
+  });
+
+  navbar.addEventListener("mouseleave", () => {
+    purple.style.display = "none";
+    purple.style.opacity = "0";
+    cursor.style.backgroundColor = "#edbfff";
+    cursor.style.width = "1vw";
+    cursor.style.height = "1vw";
+  });
+});
+
+// Making logic first then making it concise and optimized //
+
+// const navItems = document.querySelectorAll(".nav-part2 h4");
+// const marquee = document.querySelector(".marquee");
+
+// const var0 = navItems[0];
+// const var1 = navItems[1];
+// const var2 = navItems[2];
+// const var3 = navItems[3];
+
+// console.log(var0.innerHTML);
+// console.log(var1.innerHTML);
+// console.log(var2.innerHTML);
+// console.log(var3.innerHTML);
+
+// var0.addEventListener("mouseenter", () => {
+//   marquee.textContent = var0.innerHTML;
+//   marquee.style.display = "block";
+// });
+// var1.addEventListener("mouseenter", () => {
+//   marquee.textContent = var1.innerHTML;
+//   marquee.style.display = "block";
+// });
+// var2.addEventListener("mouseenter", () => {
+//   marquee.textContent = var2.innerHTML;
+//   marquee.style.display = "block";
+// });
+// var3.addEventListener("mouseenter", () => {
+//   marquee.textContent = var3.innerHTML;
+//   marquee.style.display = "block";
+// });
+
+const navItems = document.querySelectorAll(".nav-part2 h4");
+const marquee = document.querySelector(".marquee");
+
+navItems.forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    marquee.textContent = `${" " + item.innerHTML + " "}`.repeat(50); // this will repeat the text for the given number times
+    marquee.style.display = "blcok";
+  });
+});
