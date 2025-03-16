@@ -91,8 +91,9 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
-  padding: 1.5vw 0.5vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0.8vw 0.5vw;
 }
 
 .nav-part3 .circle {
@@ -109,7 +110,6 @@ html {
 }
 
 #nav h4:nth-child(1) {
-  font-family: pp mori;
   border-bottom: 1.5px solid white;
 }
 
@@ -484,6 +484,153 @@ html {
 /* // Footer starts from here // */
 footer {
   width: 100%;
-  min-height: 100vh;
+  min-height: 72vw;
+  padding: 2.2vw 9vw 2vw 6vw;
   background-color: #edbfff;
+}
+
+footer .upper {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #0f0d0d 0.1vw solid;
+}
+
+footer .upper .text {
+  font-size: 2.8vw;
+  color: #111;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.1vw;
+  text-transform: uppercase;
+}
+
+footer .upper .circle {
+  letter-spacing: -0.05vw;
+  font-size: 0.8vw;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #111;
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  letter-spacing: -0.05vw;
+  align-items: center;
+  justify-content: center;
+  height: 10.4vw;
+  width: 10.4vw;
+}
+
+footer .lower {
+  width: 100%;
+  margin-top: 5vw;
+  min-height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: lightblue; */
+}
+
+footer .lower .email-div {
+  width: 35%;
+  /* background-color: yellow; */
+}
+footer .lower .email-div p {
+  padding-bottom: 2.5vw;
+  font-size: 1.8vw;
+  color: #111;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.1vw;
+}
+
+footer .lower .email-div .input {
+  background-color: transparent;
+  border-bottom: 0.1vw solid #111;
+  padding-bottom: 0.35vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .lower .email-div input {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1.15vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  color: #111;
+}
+
+footer .lower .email-div button {
+  background-color: transparent;
+  color: #111;
+  border: #111 0.1vw solid;
+  padding: 0.25vw 0.8vw;
+  font-size: 0.8vw;
+  font-weight: 600;
+  border-radius: 1vw;
+}
+
+footer .lower .links-div {
+  padding: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: fit-content;
+}
+
+footer .lower .links-div h6 {
+  font-size: 1.7vw;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: -0.05vw;
+  color: #111;
+}
+
+footer .lower .links-div .parent-links {
+  /* background-color: yellowgreen; */
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .lower .links-div .parent-links .a-div {
+  display: flex;
+  letter-spacing: -0.1;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+footer .lower .links-div .parent-links .a-div p {
+  letter-spacing: -0.02vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #111;
+}
+
+footer .lower .links-div .parent-links .a-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1vw;
+}
+footer .lower .links-div .parent-links .a-lists a {
+  letter-spacing: -0.02vw;
+  font-size: 0.83vw;
+  color: #0f0d0d;
+  /* background-color: violet; */
+  font-weight: 600;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }

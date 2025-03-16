@@ -208,9 +208,17 @@ h4.forEach((ele) => {
 const navItems = document.querySelectorAll(".nav-part2 h4");
 const marquee = document.querySelector(".marquee");
 
-navItems.forEach((item) => {
+navItems.forEach((item, index) => {
+  if (index !== 3) {
+    item.innerHTML += " , &nbsp;";
+  }
+});
+
+const barValue = ["Home", "Work", "Studio", "Contact"];
+
+navItems.forEach((item, index) => {
   item.addEventListener("mouseenter", () => {
-    marquee.textContent = `${" " + item.innerHTML + " "}`.repeat(50); // this will repeat the text for the given number times
+    marquee.textContent = `${" " + barValue[index] + " "}`.repeat(50); // this will repeat the text for the given number times
     marquee.style.display = "blcok";
   });
 });
