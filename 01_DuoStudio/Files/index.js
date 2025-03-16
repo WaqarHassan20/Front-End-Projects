@@ -104,7 +104,7 @@ const timeline3 = gsap.timeline({
   scrollTrigger: {
     trigger: ".page1 h1",
     scroller: ".main",
-    markers: true,
+    // markers: true,
     start: "top -380%",
     end: "top -400%",
     scrub: 3,
@@ -114,3 +114,7 @@ const timeline3 = gsap.timeline({
 timeline3.to(".main", {
   backgroundColor: "#0f0d0d",
 });
+
+
+var boxes = document.querySelectorAll(".box");
+boxes.forEach((box)=>{})
