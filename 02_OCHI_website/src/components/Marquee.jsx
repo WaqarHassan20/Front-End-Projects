@@ -1,12 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import LocomotiveScroll from "locomotive-scroll";
 function Marquee() {
   return (
     <div
-      // data-scroll
-      // data-scroll-section
-      // data-scroll-speed="10"
       className="w-full rounded-tl-3xl rounded-tr-3xl bg-[#004D43] pt-28 pb-14"
     >
       <div className="border-t-1 border-b-1 border-zinc-400 flex overflow-hidden whitespace-nowrap">

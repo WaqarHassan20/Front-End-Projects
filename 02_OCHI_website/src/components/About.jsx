@@ -1,14 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import LocomotiveScroll from "locomotive-scroll";
 function About() {
   return (
-    <div
-      // data-scroll
-      // data-scroll-section
-      // data-scroll-speed="2"
-      className="w-full p-[4vw] bg-[#CDEA68] text-black rounded-tl-3xl rounded-tr-3xl "
-    >
+    <div className="w-full p-[4vw] bg-[#CDEA68] text-black rounded-tl-3xl rounded-tr-3xl ">
       <h1 className="font-sans text-[2.8vw] leading-[3.7vw] font-medium tracking-tight">
         Ochi is a strategic presentation agency for forward-thinking businesses
         that need to raise funds, sell products, explain complex ideas, and hire
