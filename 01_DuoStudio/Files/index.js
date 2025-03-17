@@ -50,7 +50,7 @@ const timeline = gsap.timeline({
     trigger: ".page1 h1",
     scroller: ".main",
     // markers: true,
-    start: "top 35%",
+    start: "top 20%",
     end: "top 0%",
     scrub: 3,
   },
@@ -59,7 +59,7 @@ const timeline = gsap.timeline({
 timeline.to(
   ".page1 h1",
   {
-    x: -150,
+    x: -200,
   },
   "one"
 );
@@ -67,7 +67,7 @@ timeline.to(
 timeline.to(
   ".page1 h2",
   {
-    x: 300,
+    x: 200,
   },
   "one"
 );
@@ -219,6 +219,7 @@ const barValue = ["Home", "Work", "Studio", "Contact"];
 navItems.forEach((item, index) => {
   item.addEventListener("mouseenter", () => {
     marquee.textContent = `${" " + barValue[index] + " "}`.repeat(50); // this will repeat the text for the given number times
-    marquee.style.display = "blcok";
+    marquee.style.fontWeight = "900";
+    marquee.style.display = "block";
   });
 });

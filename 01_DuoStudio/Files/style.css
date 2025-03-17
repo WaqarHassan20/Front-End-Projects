@@ -327,8 +327,8 @@ html {
   font-weight: 600;
   text-align: center;
   letter-spacing: -0.03vw;
-  margin-top: 1.5vw;
-  margin-bottom: 5vw;
+  margin-top: 10rem;
+  margin-bottom: 3vw;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -484,7 +484,7 @@ html {
 /* // Footer starts from here // */
 footer {
   width: 100%;
-  min-height: 72vw;
+  min-height: 78vw;
   padding: 2.2vw 9vw 2vw 6vw;
   background-color: #edbfff;
 }
