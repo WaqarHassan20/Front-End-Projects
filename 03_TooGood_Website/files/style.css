@@ -65,7 +65,7 @@ body {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 #page2 .Buy-do {
@@ -73,7 +73,7 @@ body {
   justify-content: space-between;
   padding: 0vw 1vw;
   align-items: center;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 0.8vw;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -100,5 +100,12 @@ body {
 #page2 .elem {
   height: 100%;
   width: 32.7%;
-  background-color: red;
+  overflow: hidden;
+}
+
+#page2 .elem img {
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  scale: 1.15;
 }
