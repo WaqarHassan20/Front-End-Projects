@@ -50,7 +50,7 @@ const timeline = gsap.timeline({
     trigger: ".page1 h1",
     scroller: ".main",
     // markers: true,
-    start: "top 20%",
+    start: "top 40%",
     end: "top 0%",
     scrub: 3,
   },
