@@ -15,16 +15,12 @@ function VideoConFunction() {
   });
 
   videoCon.addEventListener("mousemove", (dets) => {
-    const rect = imageContainer.getBoundingClientRect();
-    
-     // left: dets.clientX - 50,
-      // top: dets.clientY - 50,
-      left = dets.clientX - rect.left;
-       top = dets.clientY - rect.top
+    const rect = videoCon.getBoundingClientRect(); // Get container position
+    gsap.to(playBtn, {
+      x: dets.clientX - rect.left - 50, // Corrected subtraction
+      y: dets.clientY - rect.top - 50,
       cursor: "pointer",
-
-
-    // gsap.to(playBtn, {});
+    });
   });
 }
 VideoConFunction();
