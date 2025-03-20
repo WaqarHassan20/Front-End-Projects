@@ -15,11 +15,16 @@ function VideoConFunction() {
   });
 
   videoCon.addEventListener("mousemove", (dets) => {
-    gsap.to(playBtn, {
-      left: dets.clientX - 50,
-      top: dets.clientY - 50,
+    const rect = imageContainer.getBoundingClientRect();
+    
+     // left: dets.clientX - 50,
+      // top: dets.clientY - 50,
+      left = dets.clientX - rect.left;
+       top = dets.clientY - rect.top
       cursor: "pointer",
-    });
+
+
+    // gsap.to(playBtn, {});
   });
 }
 VideoConFunction();
