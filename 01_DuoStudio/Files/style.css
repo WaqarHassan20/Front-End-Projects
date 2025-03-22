@@ -73,7 +73,7 @@ html {
 }
 
 #nav {
-  padding: 0.625rem 5vw;
+  padding: 0.625rem 2vw;
   width: 100%;
   position: fixed;
   mix-blend-mode: difference;
@@ -127,16 +127,6 @@ html {
   font-family: pp mori;
   margin-left: 23vw;
   letter-spacing: -2px;
-}
-
-.page1 .paragraph {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5vw;
-  font-weight: 100;
-  font-family: pp mori;
-  margin-left: 2vw;
 }
 
 .page1 video {
@@ -312,10 +302,11 @@ html {
 /* // page4 starts from here // */
 .page4 {
   border-top: 0.1vw solid #fff;
-  /* background-color: #edbfff; */
+  background-color: #edbfff;
   position: relative;
-  min-height: 100vh;
+  min-height: 120vh;
   padding: 2vw;
+  padding-top: 10vw;
   width: 100%;
   z-index: 9;
 }
@@ -484,7 +475,7 @@ html {
 /* // Footer starts from here // */
 footer {
   width: 100%;
-  min-height: 78vw;
+  min-height: 79vw;
   padding: 2.2vw 9vw 2vw 6vw;
   background-color: #edbfff;
 }
