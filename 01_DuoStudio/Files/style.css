@@ -302,11 +302,10 @@ html {
 /* // page4 starts from here // */
 .page4 {
   border-top: 0.1vw solid #fff;
-  background-color: #edbfff;
   position: relative;
-  min-height: 120vh;
+  min-height: 100vh;
   padding: 2vw;
-  padding-top: 10vw;
+  padding-top: 2vw;
   width: 100%;
   z-index: 9;
 }

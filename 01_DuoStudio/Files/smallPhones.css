@@ -19,6 +19,7 @@
   .page1 {
     min-height: 100vh;
     padding-top: 40vw;
+    overflow: hidden;
     /* background-color: yellowgreen; */
   }
 
@@ -174,12 +175,13 @@
   /* // page4 starts from here // */
   .page4 {
     background-color: #111;
-    min-height: 70vh;
+    min-height: 65vh;
   }
 
   .page4 .top-text {
-    font-size: 2.5vw;
-    font-weight: 400;
+    margin-top: 0rem;
+    font-size: 2vw;
+    font-weight: 800;
   }
 
   .element {
@@ -215,8 +217,8 @@
     background-color: #111;
     width: 100%;
     min-height: fit-content;
-    border-top: 0.2vw solid #fff;
-    padding: 5.8vw;
+    border-top: 0.1vw solid #fff;
+    padding: 17vw 5.8vw;
     position: relative;
     z-index: 9;
   }
