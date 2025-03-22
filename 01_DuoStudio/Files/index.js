@@ -35,14 +35,21 @@ init();
 
 // ------------------------------------------ //
 // Gsap using the timelines and scrolltrigger //
+let mm = gsap.matchMedia();
 
-gsap.from(".page1 h1,h2", {
-  opacity: 0,
-  y: 100,
-  duration: 2.7,
-  delay: 0.5,
-  stagger: 0.2,
-  ease: "power4.out",
+mm.add("(max-width: 768px)", () => {
+  return () => gsap.killTweensOf(".page1 h1,h2");
+});
+
+mm.add("(min-width: 769px)", () => {
+  gsap.from(".page1 h1,h2", {
+    opacity: 0,
+    y: 100,
+    duration: 2.7,
+    delay: 0.5,
+    stagger: 0.2,
+    ease: "power4.out",
+  });
 });
 
 const timeline = gsap.timeline({
@@ -138,8 +145,8 @@ boxes.forEach((box) => {
     }
   });
   box.addEventListener("mouseleave", () => {
-    cursor.style.width = "1vw";
-    cursor.style.height = "1vw";
+    cursor.style.width = "2vw";
+    cursor.style.height = "2vw";
     cursor.style.borderRadius = "100%";
     cursor.style.backgroundImage = ``;
     for (let i = 0; i < 3; i++) {
